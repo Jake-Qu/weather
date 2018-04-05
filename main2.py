@@ -3,8 +3,11 @@ import urllib.parse
 import urllib.request
 import json
 import sys
+
 if  len(sys.argv)== 1:
     location = input('what is your location?')
+    if location == "":
+        location = '北京'
 else:
     location = sys.argv[1]
 r_location = urllib.parse.quote(location)
