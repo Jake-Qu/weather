@@ -10,7 +10,6 @@ def get_locatoin():
     req = urllib.request.Request(urls)
     with urllib.request.urlopen(req) as response:
         ip = response.read()
-        #print(ip.decode('utf-8'))
         r_ip = ip.decode('utf-8')
     urls = 'http://freeapi.ipip.net/' + r_ip
     req = urllib.request.Request(urls)
@@ -23,7 +22,6 @@ def get_locatoin():
 if  len(sys.argv)== 1:
     location = input('what is your location?')
     if location == "":
-        #location = '北京'
         location = get_locatoin()
 else:
     location = sys.argv[1]
@@ -32,13 +30,12 @@ else:
 
 
 #取得天气
-def get_weather(locations):
+def get_weather(locations='北京'):
     r_location = urllib.parse.quote(locations)
     link = 'http://api.map.baidu.com/telematics/v3/weather?location=' + r_location +'&output=json&ak=KPGX6sBfBZvz8NlDN5mXDNBF&callback='
     req = urllib.request.Request(link)
     with urllib.request.urlopen(req) as response:
         the_page = response.read()
-    #print (the_page)
     s = json.loads(the_page);
     print("今日各项指数：")
     for i in range(1,5):

@@ -1,3 +1,5 @@
-this is a python weather project
-添加了默认天气
-获取ip获得天气功能正在开发
+Python写的天气预报功能
+=============
+添加了默认天气<br />
+获取ip获得天气功能正在开发<br />
+获取ip获得天气功能开发完成<br />
