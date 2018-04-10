@@ -3,6 +3,7 @@ import urllib.parse
 import urllib.request
 import json
 import sys
+
 if  len(sys.argv)== 1:
     location = input('what is your location?')
 else:
