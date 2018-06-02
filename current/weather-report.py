@@ -22,6 +22,7 @@ def get_locatoin():
 if  len(sys.argv)== 1:
     location = input('what is your location?')
     if location == "":
+        print("请稍等，正在获取您的地理位置...")
         location = get_locatoin()
 else:
     location = sys.argv[1]
